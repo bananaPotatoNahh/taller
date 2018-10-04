@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Crear Personas {% endblock %}
+{% block encabezado %} Crear Personas {% endblock %}
+
+{% block content %}
+
+    <form action="/personas/crear/" method="post">
+         {% csrf_token %}
+        <input type="text" name="nombre">
+        <input type="submit">
+    </form>
+
+{% endblock %}

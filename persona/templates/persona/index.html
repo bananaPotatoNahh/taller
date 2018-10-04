@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Listar Personas {% endblock %}
+{% block encabezado %} Listar Personas {% endblock %}
+
+{% block content %}
+
+    <a href="/personas/crear/">Crear Persona</a>
+
+    <ul>
+    {% for persona in personas %}
+        <li>{{ persona.nombre }} {{ persona.apellidoPaterno }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
